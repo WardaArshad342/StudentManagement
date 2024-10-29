@@ -530,11 +530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
       "projectName": "StudentManagement",
-      "projectPath": "C:\\repos\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+      "projectPath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\StudentManagement\\StudentManagement\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\StudentManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"
@@ -556,11 +556,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\repos\\StudentManagement\\DomainModels\\DomainModels.csproj": {
-              "projectPath": "C:\\repos\\StudentManagement\\DomainModels\\DomainModels.csproj"
+            "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\DomainModels\\DomainModels.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\DomainModels\\DomainModels.csproj"
             },
-            "C:\\repos\\StudentManagement\\ServiceLayer\\ServiceLayer.csproj": {
-              "projectPath": "C:\\repos\\StudentManagement\\ServiceLayer\\ServiceLayer.csproj"
+            "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\ServiceLayer\\ServiceLayer.csproj": {
+              "projectPath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\ServiceLayer\\ServiceLayer.csproj"
             }
           }
         }

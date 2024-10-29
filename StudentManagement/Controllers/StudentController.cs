@@ -8,10 +8,12 @@ namespace StudentManagement.Controllers
     public class StudentController : Controller
     {
         private readonly IStudentService _studentService;
+        private readonly ICourseService _courseService;
 
-        public StudentController(IStudentService studentService)
+        public StudentController(IStudentService studentService, ICourseService courseService)
         {
             _studentService = studentService;
+            _courseService = courseService;
         }
 
         public async Task<IActionResult> Index()
@@ -19,11 +21,6 @@ namespace StudentManagement.Controllers
             var students = await _studentService.GetStudentList();
             return View(students);
         }
-
-        //public IActionResult Create()
-        //{
-        //    return View();
-        //}
 
         public IActionResult Create()
         {
@@ -45,17 +42,6 @@ namespace StudentManagement.Controllers
             }
             return View(student);
         }
-
-        //public async Task<IActionResult> Edit(int id)
-        //{
-        //    var student = await _studentService.GetStudentById(id);
-        //    if (student == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    student = await _studentService.UpdateStudent(student);
-        //    return View(student);
-        //}
 
         public async Task<IActionResult> Edit(int id)
         {
@@ -106,5 +92,29 @@ namespace StudentManagement.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult> AssignCourses(int studentId)
+        {
+            var student = await _studentService.GetStudentById(studentId);
+            if (student == null)
+                return NotFound();
+
+            var courses = await _courseService.GetCourseList();
+            ViewBag.CourseList = new MultiSelectList(courses, "CourseId", "Name");
+
+            return View(student);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AssignCourses(Student student, List<int> selectedCourseIds)
+        {
+            if (selectedCourseIds == null)
+                selectedCourseIds = new List<int>();
+
+            await _studentService.AssignCoursesToStudent(student, selectedCourseIds);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

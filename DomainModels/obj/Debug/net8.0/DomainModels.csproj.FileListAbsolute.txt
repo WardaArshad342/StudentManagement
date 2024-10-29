@@ -9,3 +9,15 @@ C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.dll
 C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\refint\DomainModels.dll
 C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.pdb
 C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\ref\DomainModels.dll
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\bin\Debug\net8.0\DomainModels.deps.json
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\bin\Debug\net8.0\DomainModels.dll
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\bin\Debug\net8.0\DomainModels.pdb
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.AssemblyInfo.cs
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.sourcelink.json
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.dll
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\refint\DomainModels.dll
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.pdb
+C:\Users\hp\Desktop\Angular Project\StudentManagement\DomainModels\obj\Debug\net8.0\ref\DomainModels.dll

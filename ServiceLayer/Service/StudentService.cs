@@ -40,5 +40,10 @@ namespace ServiceLayer
         {
             return await _studentRepo.UpdateStudent(student);
         }
+
+        public async Task<Student> AssignCoursesToStudent(Student student, List<int> courseIds)
+        {
+            return await _studentRepo.AssignCoursesToStudent(student, courseIds);
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DomainModels;
 using System.Data;
 using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace RepositoryLayer
 {
@@ -120,6 +121,44 @@ namespace RepositoryLayer
                         Address2 = Convert.IsDBNull(dt_1.Rows[0]["Address2"]) ? string.Empty : Convert.ToString(dt_1.Rows[0]["Address2"]),
                         Address3 = Convert.IsDBNull(dt_1.Rows[0]["Address3"]) ? string.Empty : Convert.ToString(dt_1.Rows[0]["Address3"]),
                     };
+                    await GetStudentCourses(student);
+                }
+                return student;
+            }
+            catch (SqlException ex)
+            {
+                if (ex.State == 101)
+                {
+                    throw;
+                }
+                throw;
+            }
+        }
+
+        public async Task<Student> GetStudentCourses(Student student)
+        {
+            try
+            {
+                string execCommand = "stp_Student";
+                SqlCommand _sql = await DbConnection.Instance.GetCommandAsync(execCommand, CommandType.StoredProcedure);
+                _sql.Parameters.Add(new SqlParameter("@studentId", student.StudentId));
+                _sql.Parameters.Add(new SqlParameter("@Val", 8));
+                DataTable dt_2 = await DbConnection.Instance.ExecuteAsync(_sql);
+                student.Courses = new List<Course>();
+                if (dt_2.Rows.Count > 0)
+                {
+                    for (int i = 0; i < dt_2.Rows.Count; i++)
+                    {
+                        student.Courses.Add(new Course
+                        {
+                            CourseId = Convert.IsDBNull(dt_2.Rows[i]["CourseId"]) ? 0 : Convert.ToInt32(dt_2.Rows[i]["CourseId"]),
+                            Code = Convert.IsDBNull(dt_2.Rows[i]["Code"]) ? string.Empty : Convert.ToString(dt_2.Rows[i]["Code"]),
+                            Name = Convert.IsDBNull(dt_2.Rows[i]["Name"]) ? string.Empty : Convert.ToString(dt_2.Rows[i]["Name"]),
+                            TeacherName = Convert.IsDBNull(dt_2.Rows[i]["TeacherName"]) ? string.Empty : Convert.ToString(dt_2.Rows[i]["TeacherName"]),
+                            StartDate = Convert.IsDBNull(dt_2.Rows[i]["Code"]) ? null : Convert.ToDateTime(dt_2.Rows[i]["StartDate"]),
+                            EndDate = Convert.IsDBNull(dt_2.Rows[i]["Code"]) ? null : Convert.ToDateTime(dt_2.Rows[i]["EndDate"]),
+                        });
+                    }
                 }
                 return student;
             }
@@ -157,6 +196,7 @@ namespace RepositoryLayer
                             Address2 = Convert.IsDBNull(dr["Address2"]) ? string.Empty : Convert.ToString(dr["Address2"]),
                             Address3 = Convert.IsDBNull(dr["Address3"]) ? string.Empty : Convert.ToString(dr["Address3"]),
                         };
+                        await GetStudentCourses(student);
                         students.Add(student);
                     }
                 }
@@ -201,6 +241,67 @@ namespace RepositoryLayer
                     }
                 }
                 return students;
+            }
+            catch (SqlException ex)
+            {
+                if (ex.State == 101)
+                {
+                    throw;
+                }
+                throw;
+            }
+        }
+
+        public async Task<Student> AssignCoursesToStudent(Student student, List<int> courseIds)
+        {
+            try
+            {
+                await DeleteStudentCourses(student.StudentId);
+                string execCommand = "stp_Student";
+                SqlCommand _sql = await DbConnection.Instance.GetCommandAsync(execCommand, CommandType.StoredProcedure);
+                _sql.Parameters.Add(new SqlParameter("@StudentId", student.StudentId));
+                var courseIdParameter = new SqlParameter("@CourseId", SqlDbType.Int);
+                _sql.Parameters.Add(courseIdParameter);
+                _sql.Parameters.Add(new SqlParameter("@Val", 5));
+                DataTable dt_Save = new DataTable();
+
+                foreach (int courseId in courseIds)
+                {
+                    courseIdParameter.Value = courseId;
+                    dt_Save = await DbConnection.Instance.ExecuteAsync(_sql);
+                    if (dt_Save.Rows.Count > 0)
+                    {
+                        //student.StudentId = Convert.IsDBNull(dt_Save.Rows[0]["Id"]) ? 0 : Convert.ToInt32(dt_Save.Rows[0]["Id"]);
+                    }
+                }
+                
+                return student;
+            }
+            catch (SqlException ex)
+            {
+                if (ex.State == 101)
+                {
+                    throw;
+                }
+                throw;
+            }
+        }
+
+        public async Task<bool> DeleteStudentCourses(int studentId)
+        {
+            bool val = false;
+            try
+            {
+                string execCommand = "stp_Student";
+                SqlCommand _sql = await DbConnection.Instance.GetCommandAsync(execCommand, CommandType.StoredProcedure);
+                _sql.Parameters.Add(new SqlParameter("@studentId", studentId));
+                _sql.Parameters.Add(new SqlParameter("@Val", 6));
+                DataTable dt_1 = await DbConnection.Instance.ExecuteAsync(_sql);
+                if (dt_1.Rows.Count > 0)
+                {
+                    val = true;
+                }
+                return val;
             }
             catch (SqlException ex)
             {

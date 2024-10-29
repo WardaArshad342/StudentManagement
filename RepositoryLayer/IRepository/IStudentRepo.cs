@@ -10,5 +10,6 @@ namespace RepositoryLayer
         Task<Student> GetStudentById(int studentId);
         Task<List<Student>> GetStudentList();
         Task<List<Student>> GetStudentsByCourseId(int courseId);
+        Task<Student> AssignCoursesToStudent(Student student, List<int> courseIds);
     }
 }

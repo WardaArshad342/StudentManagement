@@ -1,0 +1,21 @@
+﻿@model DomainModels.Student
+
+@{
+    ViewData["Title"] = "Assign Courses to Student";
+}
+
+<h1>Assign Courses to @Model.Firstname @Model.Surname</h1>
+
+<form asp-action="AssignCourses" method="post">
+    <input type="hidden" asp-for="StudentId" />
+
+    <div class="form-group">
+        <label>Select Courses</label>
+        <select asp-for="Courses" class="form-control" asp-items="ViewBag.CourseList" multiple="multiple" name="selectedCourseIds">
+            <option value="">-- Select Courses --</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

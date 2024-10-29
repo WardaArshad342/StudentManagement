@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\StudentManagement\\DomainModels\\DomainModels.csproj",
+      "projectUniqueName": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\DomainModels\\DomainModels.csproj",
       "projectName": "DomainModels",
-      "projectPath": "C:\\repos\\StudentManagement\\DomainModels\\DomainModels.csproj",
+      "projectPath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\DomainModels\\DomainModels.csproj",
       "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\StudentManagement\\DomainModels\\obj\\",
+      "outputPath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\DomainModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+jyA03HYPeI=",
+  "dgSpecHash": "aLFbqSu7YJQ=",
   "success": true,
-  "projectFilePath": "C:\\repos\\StudentManagement\\RepositoryLayer\\RepositoryLayer.csproj",
+  "projectFilePath": "C:\\Users\\hp\\Desktop\\Angular Project\\StudentManagement\\RepositoryLayer\\RepositoryLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -53,7 +53,23 @@ namespace RepositoryLayer
                 return dataTable;
             }
         }
+        public async Task<DataSet> ExecuteAsyncDataSet(SqlCommand command)
+        {
+            var dataSet = new DataSet();
 
+            using (var reader = await command.ExecuteReaderAsync())
+            {
+                do
+                {
+                    var dataTable = new DataTable();
+                    dataTable.Load(reader);
+                    dataSet.Tables.Add(dataTable);
+                } while (await reader.NextResultAsync());
+            }
+
+            return dataSet;
+        }
+       
         public void CloseConnection()
         {
             if (_connection != null && _connection.State == System.Data.ConnectionState.Open)
