@@ -1,0 +1,17 @@
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\ServiceLayer.deps.json
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\ServiceLayer.dll
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\ServiceLayer.pdb
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\DomainModels.dll
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\RepositoryLayer.dll
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\DomainModels.pdb
+C:\repos\StudentManagement\ServiceLayer\bin\Debug\net8.0\RepositoryLayer.pdb
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.csproj.AssemblyReference.cache
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.AssemblyInfoInputs.cache
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.AssemblyInfo.cs
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.csproj.CoreCompileInputs.cache
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceL.3037F684.Up2Date
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.dll
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\refint\ServiceLayer.dll
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ServiceLayer.pdb
+C:\repos\StudentManagement\ServiceLayer\obj\Debug\net8.0\ref\ServiceLayer.dll

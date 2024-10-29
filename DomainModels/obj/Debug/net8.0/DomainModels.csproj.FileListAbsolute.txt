@@ -1,0 +1,11 @@
+C:\repos\StudentManagement\DomainModels\bin\Debug\net8.0\DomainModels.deps.json
+C:\repos\StudentManagement\DomainModels\bin\Debug\net8.0\DomainModels.dll
+C:\repos\StudentManagement\DomainModels\bin\Debug\net8.0\DomainModels.pdb
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.AssemblyInfoInputs.cache
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.AssemblyInfo.cs
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.csproj.CoreCompileInputs.cache
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.dll
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\refint\DomainModels.dll
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\DomainModels.pdb
+C:\repos\StudentManagement\DomainModels\obj\Debug\net8.0\ref\DomainModels.dll

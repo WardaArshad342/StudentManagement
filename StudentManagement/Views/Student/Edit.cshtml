@@ -1,0 +1,50 @@
+﻿@model DomainModels.Student
+
+@{
+    ViewData["Title"] = "Edit Student";
+}
+
+<h1>Edit Student</h1>
+
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Firstname" class="control-label"></label>
+        <input asp-for="Firstname" class="form-control" />
+        <span asp-validation-for="Firstname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname" class="control-label"></label>
+        <input asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Gender" class="control-label"></label>
+        <select asp-for="Gender" class="form-control" asp-items="ViewBag.GenderList">
+            <option value="">-- Select Gender --</option>
+        </select>
+        <span asp-validation-for="Gender" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DOB" class="control-label"></label>
+        <input asp-for="DOB" class="form-control" type="date" />
+        <span asp-validation-for="DOB" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address1" class="control-label"></label>
+        <input asp-for="Address1" class="form-control" />
+        <span asp-validation-for="Address1" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address2" class="control-label"></label>
+        <input asp-for="Address2" class="form-control" />
+        <span asp-validation-for="Address2" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Address3" class="control-label"></label>
+        <input asp-for="Address3" class="form-control" />
+        <span asp-validation-for="Address3" class="text-danger"></span>
+    </div>
+    <input type="hidden" asp-for="StudentId" />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>
